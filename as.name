@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# A implementaton of https://github.com/jjmartres/Zabbix/blob/master/zbx-scripts/as.name/as.name as bash.
+# 
+# Zabbix server docker image does not have whois or curl. busybox allows wget, so using it.
+
+AS=$(wget -q -O- http://ipinfo.io/${2}/org 2> /dev/null | grep ^AS |  cut -f 1 -d ' ' | sed -e 's,AS,,g')
+
+if [ -z ${AS} ]; then
+	echo -n "N/A"
+else
+	echo -n ${AS}
+fi
+

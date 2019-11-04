@@ -62,7 +62,7 @@
                             <snmp_community/>
                             <snmp_oid/>
                             <key>as.name[&quot;-p&quot;,&quot;{#SNMPVALUE}&quot;]</key>
-                            <delay>300</delay>
+                            <delay>43200</delay>
                             <history>7d</history>
                             <trends>0</trends>
                             <status>0</status>
